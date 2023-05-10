@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- SLICK-MIN-CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SLICK-THEME-MIN-CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/Root.css">
+    <title>dashboard</title>
+</head>
+
+<body class="dashboard">
+    <div class="d-flex vh-100 w-100">
+        <!-- aside bar -->
+        <aside class="w_256 d-flex flex-column py-4 bg_black p_aside overflow-y-auto">
+            <img src="./assets/images/svg/cp_logo.svg" alt="" class="logo">
+            <div class="d-flex align-items-center gap-3 aside_btn mt_43">
+                <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M5.62192 11.9557L13.3875 4.19004C13.5956 3.98207 13.8777 3.86523 14.1719 3.86523C14.466 3.86523 14.7482 3.98207 14.9562 4.19004L22.7218 11.9557C22.9299 12.1637 23.0468 12.4458 23.0469 12.74V23.3745C23.0469 23.6687 22.93 23.9509 22.7219 24.1589C22.5139 24.367 22.2317 24.4838 21.9375 24.4838H16.3906V16.7182H11.9531V24.4838H6.40625C6.11203 24.4838 5.82985 24.367 5.6218 24.1589C5.41376 23.9509 5.29688 23.6687 5.29688 23.3745V12.74C5.29694 12.4458 5.41386 12.1637 5.62192 11.9557Z"
+                        fill="white" />
+                </svg>
+                <p class="mb-0 fc_secondary fs_lg ff_Quicksand fw_reg">Dashboard</p>
+            </div>
+            <div class="d-flex align-items-center gap-3 aside_btn">
+                <svg width="27" height="28" viewBox="0 0 27 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.29688 24.3142C2.29688 24.4907 2.367 24.66 2.49183 24.7848C2.61666 24.9097 2.78597 24.9798 2.9625 24.9798H15.2073C15.3839 24.9798 15.5532 24.9097 15.678 24.7848C15.8028 24.66 15.873 24.4907 15.873 24.3142V22.2015C15.873 21.192 15.0516 20.371 14.0425 20.371H13.7546V18.2769C13.7546 18.1004 13.6845 17.9311 13.5597 17.8063C13.4348 17.6814 13.2655 17.6113 13.089 17.6113H5.08052C4.90398 17.6113 4.73468 17.6814 4.60985 17.8063C4.48502 17.9311 4.41489 18.1004 4.41489 18.2769V20.371H4.12734C3.64204 20.3715 3.17676 20.5646 2.83359 20.9077C2.49043 21.2509 2.2974 21.7162 2.29688 22.2015V24.3142ZM5.74614 18.9426H12.4234V20.371H5.74614V18.9426ZM3.62813 22.2015C3.62813 21.9262 3.85211 21.7022 4.12734 21.7022H14.0425C14.3177 21.7022 14.5417 21.9262 14.5417 22.2015V23.6485H3.62813V22.2015ZM23.6511 19.5889C23.9201 19.5762 24.1838 19.5102 24.4271 19.3948C24.6703 19.2794 24.8883 19.1169 25.0682 18.9166C25.4087 18.5401 25.5976 18.0507 25.5984 17.5431C25.598 17.2568 25.5378 16.9737 25.4219 16.7119C25.3059 16.4502 25.1366 16.2155 24.9248 16.0228L18.4053 10.1716L20.6951 7.63726C20.91 7.39855 21.0215 7.08437 21.0052 6.76358C20.9888 6.44279 20.846 6.14156 20.6079 5.92594L16.1935 1.93818C16.076 1.83049 15.9381 1.74746 15.788 1.69401C15.6379 1.64056 15.4786 1.61777 15.3195 1.627C15.1605 1.6346 15.0046 1.67366 14.8608 1.74193C14.717 1.8102 14.5882 1.90631 14.4818 2.02471L7.08072 10.2179C6.97362 10.3357 6.89097 10.4737 6.83756 10.6237C6.78414 10.7737 6.76103 10.9328 6.76954 11.0919C6.78618 11.415 6.9273 11.7125 7.16725 11.9295L11.582 15.9173C11.6998 16.0245 11.8377 16.1072 11.9878 16.1606C12.1378 16.214 12.297 16.2371 12.456 16.2285C12.6149 16.2208 12.7708 16.1817 12.9145 16.1133C13.0583 16.045 13.187 15.9489 13.2933 15.8304L15.6603 13.2105L22.1761 19.0614C22.3748 19.2425 22.6075 19.3825 22.8607 19.473C23.1139 19.5636 23.3826 19.6029 23.6511 19.5889ZM15.1211 11.821C15.1195 11.8234 15.1171 11.8244 15.1155 11.8264C15.1138 11.8284 15.1128 11.8307 15.1112 11.8324L12.3858 14.8493L8.14872 11.022L15.3897 3.00584L19.6268 6.83319L15.1211 11.8217V11.821ZM16.5526 12.2224L17.5131 11.1594L24.0319 17.0103C24.1813 17.1464 24.2672 17.3404 24.2672 17.5431C24.2662 17.7269 24.1951 17.9035 24.0684 18.0367C23.9416 18.1699 23.7688 18.2496 23.5852 18.2596C23.3949 18.268 23.2089 18.2009 23.0677 18.0729L16.5526 12.2224Z"
+                        fill="#A2A3A4" />
+                </svg>
+                <p class="mb-0 fc_secondary fs_lg ff_Quicksand fw_reg">Auctions</p>
+            </div>
+            <div class="d-flex align-items-center gap-3 aside_btn ">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.0917 11.7454L23.0865 11.7246L20.1692 4.31172C20.0392 3.8931 19.6518 3.60449 19.2124 3.60449H7.38715C6.94513 3.60449 6.55251 3.8983 6.42771 4.32212L3.70021 11.6596L3.69241 11.6778L3.68721 11.6986C3.65341 11.826 3.643 11.956 3.66121 12.0834C3.65861 12.125 3.65601 12.1666 3.65601 12.2082V21.722C3.65669 22.141 3.82347 22.5427 4.11979 22.839C4.41611 23.1354 4.81781 23.3021 5.23687 23.3028H21.5447C22.4157 23.3028 23.1255 22.593 23.1281 21.722V12.2082C23.1281 12.1744 23.1281 12.1406 23.1255 12.112C23.1359 11.9846 23.1255 11.8624 23.0917 11.7454ZM15.4006 10.6274L15.3928 11.0356C15.372 12.203 14.566 12.9882 13.3882 12.9882C12.8135 12.9882 12.3195 12.8036 11.9633 12.4526C11.6071 12.1016 11.4121 11.6128 11.4017 11.0356L11.3939 10.6274H6.0429L8.10997 5.60137H18.4896L20.6138 10.6274H15.4006ZM5.65028 12.6242H9.74023C10.3721 14.1089 11.7163 14.9851 13.3908 14.9851C14.267 14.9851 15.0808 14.7407 15.7387 14.2779C16.3159 13.8723 16.7657 13.3055 17.0569 12.6242H21.1261V21.306H5.65028V12.6242Z"
+                        fill="#A2A3A4" />
+                    <circle cx="19.4922" cy="5.13281" r="3.88281" fill="#F8961C" />
+                </svg>
+
+                <p class="mb-0 fc_secondary fs_lg ff_Quicksand fw_reg">Inbox</p>
+            </div>
+            <div class="d-flex align-items-center gap-3 aside_btn mb-4">
+                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M23.2179 3.53556L23.2185 3.53614L1.39648 5.73018C1.75856 4.90859 2.28268 4.16321 2.94002 3.53677L2.94105 3.53578C3.60324 2.90232 4.3743 2.40445 5.23184 2.05768L5.23264 2.05736C6.1197 1.69746 7.05913 1.51565 8.03251 1.51565C9.3826 1.51565 10.6974 1.87673 11.838 2.55637L11.838 2.55638C12.1108 2.71895 12.3694 2.89709 12.6139 3.0908L13.0796 3.45977L13.5453 3.0908C13.7898 2.89709 14.0484 2.71895 14.3212 2.55638L14.3213 2.55637C15.4619 1.87673 16.7766 1.51565 18.1267 1.51565L18.1284 1.51564C19.0891 1.51348 20.0403 1.69776 20.9266 2.05735L20.9275 2.05774C21.7819 2.40301 22.5593 2.90498 23.2179 3.53556ZM25.4491 5.42779L24.7628 5.73018C24.7628 5.73025 24.7628 5.73032 24.7628 5.73038C24.7629 5.73062 24.763 5.73085 24.7632 5.73109L25.4491 5.42779ZM23.3983 13.7102C22.4529 15.0868 21.1388 16.5424 19.4844 18.0341C16.7358 20.5107 14.0152 22.2211 13.9125 22.2854L13.9124 22.2855L13.2006 22.7314C13.2004 22.7315 13.2002 22.7317 13.2 22.7318C13.127 22.7769 13.0292 22.7769 12.9562 22.7318C12.956 22.7317 12.9558 22.7315 12.9556 22.7314L12.2438 22.2855L12.2439 22.2854L12.2323 22.2784C12.2323 22.2784 12.2322 22.2784 12.232 22.2782C12.231 22.2777 12.2281 22.2759 12.2226 22.2724L12.1928 22.2538C12.1675 22.2378 12.1323 22.2155 12.0878 22.187C11.9988 22.1299 11.8737 22.0485 11.7173 21.9445C11.4046 21.7366 10.9682 21.4389 10.4488 21.0654C9.40881 20.3176 8.04218 19.2702 6.6719 18.0342L6.67182 18.0341C5.0176 16.5425 3.70354 15.087 2.75821 13.7105C2.16194 12.8412 1.70344 11.9919 1.38745 11.1863C1.01075 10.2242 0.828125 9.29685 0.828125 8.4232C0.828125 7.49036 1.01984 6.58504 1.39645 5.73024L23.3983 13.7102Z"
+                        stroke="#A2A3A4" stroke-width="1.5" />
+                </svg>
+                <p class="mb-0 fc_secondary fs_lg ff_Quicksand fw_reg">Favourites</p>
+            </div>
+            <div class="line"></div>
+            <div class="accordion " id="accordionExample">
+                <div class="accordion-item ">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button d-flex gap-2 " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <img src="./assets/images/svg/plus_sign.svg" alt="">
+                            <p class="fc_grey mb-0 fw_reg ff_Quicksand">
+                                WALLETS
+                            </p>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="d-flex gap-4 mb-4">
+                                <img src="./assets/images/svg/bitcoin.svg" alt="bitcoin">
+                                <p class=" mb-0 ff_Quicksand fw_reg fc_grey fs_lg">BitCoin</p>
+                            </div>
+                            <div class="d-flex gap-4 mb-4">
+                                <img src="./assets//images/svg/ethereum.svg" alt="ethereum">
+                                <p class=" mb-0 ff_Quicksand fw_reg fc_grey fs_lg">Ethereum</p>
+                            </div>
+                            <div class="d-flex gap-4 mb-4">
+                                <img src="./assets/images/svg/usd_coin.svg" alt="usd_coin">
+                                <p class=" mb-0 ff_Quicksand fw_reg fc_grey fs_lg">USD Coin </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line"></div>
+            <div class="d-flex gap-3 mt-4">
+                <img src="./assets/images/svg/setting.svg" alt="">
+                <p class="mb-0 fc_grey fs_lg ff_Quicksand">Settings</p>
+            </div>
+            <div class="d-flex gap-3 mt-4">
+                <img src="./assets/images/svg/help_icon.svg" alt="">
+                <p class="mb-0 fc_grey fs_lg ff_Quicksand">Help & FAQ</p>
+            </div>
+            <div class="d-flex gap-3 mt-4">
+                <img src="./assets/images/svg/dark_mode.svg" alt="">
+                <p class="mb-0 fc_grey fs_lg ff_Quicksand">Dark mode</p>
+            </div>
+        </aside>
+        <div class="w-100 overflow-auto">
+            <!-- nav bar -->
+            <nav class="bg_black w-100 p-3">
+                <div class="d-flex justify-content-between">
+                    <div class="position-relative">
+                        <input type="search" name="search" class="search_box ff_Quicksand fw_medium"
+                            placeholder="search">
+                        <img src="./assets/images/svg/search_icon.svg" alt="search_icon" class="search_icon">
+                    </div>
+                    <div class="d-flex gap-5">
+                        <img src="./assets/images/svg/msg.svg" alt="msg">
+                        <img src="./assets/images/svg/notification_icon.svg" alt="notification_icon">
+                        <img src="./assets/images/svg/nav_icon.svg" alt="nav_icon">
+                    </div>
+                </div>
+            </nav>
+            
+            <section class="container">
+                <div class="row">
+                    <!-- top auction -->
+                    <div class="col-lg-8">
+                        <h3 class="fc_primary ff_saira fw_semiBold fs_5xl mb-4">Top Auction</h3>
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-lg-6 col-12 position-relative">
+                                    <img src="./assets/images/png/magic_bullet.png" alt="magic_bullet"
+                                        class="positi on-absolute w-100 top-0 position-relative">
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="d-flex justify-content-between pb-3">
+                                        <h3 class="fc_primary ff_saira fw_semiBold fs_7xl">Magic Bullets</h3>
+                                        <img src="./assets/images/svg/heart_img.svg" alt="heart_img">
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                        <img src="./assets/images/svg/girl_profile.svg" alt="girl_profile">
+                                        <div>
+                                            <h3 class="mb-0 ff_poppins fw-semibold fs_xmd fc_primary">Debbie Reese</h3>
+                                            <p class="mb-0 ff_Quicksand fw_reg fs_sm text_grey">@Debbie111</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pb-5 pt-4 gap-5">
+                                        <div>
+                                            <p class="mb-0 fc_primary ff_Quicksand fw_reg fs_sm pb-2">Price per NFT</p>
+                                            <div class="d-flex">
+                                                <img src="./assets/images/svg/icon_player.svg" alt="">
+                                                <h3 class="mb-0 ff_saira fw_semiBold fs_3xl fc_primary">80 PLAYR</h3>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 fc_primary ff_Quicksand fw_reg fs_sm pb-2">Starts in</p>
+                                            <h3 class="mb-0 ff_saira fw_semiBold fs_3xl fc_primary">02h 32m 44s</h3>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-3 pt-5">
+                                        <button class="border-0 rewards_btn text-black ff_saira fw-semibold fs_reg">View
+                                            Rewards</button>
+                                        <button class="collection_btn ff_saira fw-semibold fs_reg fc_primary">View
+                                            Collection</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3 class="ff_saira fw_semiBold fc_primary fs_5xl mb-4">My Wallet</h3>
+                        <div class="my_wallet">
+                            <p class="text-center fs_reg fc_light ff_Quicksand fw_medium">Your Balance</p>
+                            <p class="mb-0 fc_primary fw-semibold fs_8xl ff_saira text-center"><span class="fs_reg"> ETH
+                                </span>21.533.10</p>
+                            <div class="d-flex">
+                                <img src="./assets/images/svg/trans_img2.svg" alt="">
+                                <p>Ethereum ETH</p>
+                            </div>
+                            <div class="d-flex">
+                                <div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="./assets/images/svg/earning_icon.svg" alt="earning_icon">
+                                        <p class="mb-0 ff_Quicksand fw-medium fs_xmd fc_light">Earnings</p>
+                                    </div>
+                                    <p class="mb-0 fc_red ff_Oxanium fw-bold fs_5xl py-3 ps-5">7.048 <span
+                                            class="text-white fs_sm">
+                                            ETH</span></p>
+                                    <img src="./assets/images/png/Graph2.png" alt="Graph" class="w-100">
+                                </div>
+                                <div>
+                                    <div class="d-flex align-items-center gap-3">
+                                        <img src="./assets/images/svg/spending_icon.svg" alt="spending_icon">
+                                        <p class="mb-0 ff_Quicksand fw-medium fs_xmd fc_light">Spendings</p>
+                                    </div>
+                                    <p class="mb-0 fc_green ff_Oxanium fw-bold fs_5xl py-3 ps-5">2.013 <span
+                                            class="text-white fs_sm">
+                                            ETH</span></p>
+                                    <img src="./assets/images/png/Graph.png" alt="Graph2" class="w-100">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- slider -->
+            <section class="py-4 container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="d-flex justify-content-between align-items-center pb-4">
+                            <h2 class="fc_primary ff_saira fs_4xl">Featured NFTs</h2>
+                            <div class="d-flex gap-3">
+                                <select name="select" id="Popular" class="popular">
+                                    <option value="Popular" class="fc_primary">Popular</option>
+                                </select>
+                                <div class="slider_arrow prev">
+                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M7.58929 13.3606C7.50878 13.4413 7.41314 13.5054 7.30785 13.5491C7.20255 13.5927 7.08967 13.6152 6.97567 13.6152C6.86167 13.6152 6.74879 13.5927 6.64349 13.5491C6.5382 13.5054 6.44255 13.4413 6.36205 13.3606L0.530894 7.52946C0.466617 7.46531 0.415622 7.38912 0.380829 7.30524C0.346035 7.22136 0.328126 7.13145 0.328126 7.04064C0.328126 6.94983 0.346035 6.85991 0.380829 6.77604C0.415622 6.69216 0.466617 6.61597 0.530894 6.55182L6.36205 0.720669C6.70179 0.380923 7.24955 0.380923 7.58929 0.720669C7.92904 1.06041 7.92904 1.60817 7.58929 1.94792L2.50003 7.03717L7.59622 12.1334C7.92904 12.4731 7.92904 13.0209 7.58929 13.3606Z"
+                                            fill="#959799" fill-opacity="0.5" />
+                                    </svg>
+
+                                </div>
+                                <div class="slider_arrow next">
+                                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M1.20758 13.3606C1.28809 13.4413 1.38373 13.5054 1.48903 13.5491C1.59432 13.5927 1.70721 13.6152 1.82121 13.6152C1.93521 13.6152 2.04809 13.5927 2.15338 13.5491C2.25868 13.5054 2.35432 13.4413 2.43483 13.3606L8.26598 7.52946C8.33026 7.46531 8.38125 7.38912 8.41605 7.30524C8.45084 7.22136 8.46875 7.13145 8.46875 7.04064C8.46875 6.94983 8.45084 6.85991 8.41605 6.77604C8.38125 6.69216 8.33026 6.61597 8.26598 6.55182L2.43483 0.720669C2.09508 0.380923 1.54733 0.380923 1.20758 0.720669C0.867837 1.06041 0.867837 1.60817 1.20758 1.94792L6.29684 7.03717L1.20065 12.1334C0.867838 12.4731 0.867838 13.0209 1.20758 13.3606Z"
+                                            fill="white" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="responsive">
+                            <div class="pe-3">
+                                <div class="slider_card">
+                                    <img src="./assets/images/png/slider_img1.png" alt="slider_img1" class="w-100">
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <h3 class="mb-0 fc_primary ff_saira fw_semiBold fs_xxl">Ready Players</h3>
+                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.2137 1.73274L14.2133 1.73236C13.8115 1.34771 13.3373 1.04147 12.816 0.830807L12.8154 0.830549C12.2746 0.611142 11.6942 0.498694 11.108 0.500011L11.1068 0.500014C10.2829 0.500013 9.48059 0.720388 8.78469 1.13504L8.78468 1.13505C8.61821 1.23423 8.46052 1.34289 8.3114 1.46102L8.00092 1.707L7.69043 1.46102C7.54132 1.34289 7.38362 1.23423 7.21716 1.13505L7.21714 1.13504C6.52125 0.720388 5.71898 0.500013 4.895 0.500013C4.30088 0.500013 3.72769 0.61097 3.18647 0.830551L3.18593 0.830767C2.6627 1.04235 2.19234 1.34607 1.78839 1.73251L1.7877 1.73316L1.7877 1.73316C1.38683 2.11519 1.06725 2.56971 0.846491 3.07062L14.2137 1.73274ZM14.2137 1.73274C14.6143 2.1154 14.9339 2.57004 15.1555 3.07089C15.385 3.59201 15.5016 4.14329 15.5 4.7109V4.71235C15.5 5.24459 15.3887 5.81054 15.1584 6.39871L15.158 6.39986M14.2137 1.73274L15.158 6.39986M4.08341 10.5982L4.08347 10.5983C4.92537 11.3577 5.7652 12.0013 6.4044 12.461C6.72362 12.6905 6.9918 12.8734 7.18388 13.0011C7.27991 13.065 7.35678 13.115 7.41133 13.15C7.43861 13.1675 7.46018 13.1812 7.47565 13.1909C7.49035 13.2002 7.49758 13.2046 7.49893 13.2055L7.49915 13.2056L7.50705 13.2103L7.507 13.2104L7.94497 13.4848C7.94507 13.4848 7.94517 13.4849 7.94527 13.4849C7.97778 13.505 8.02236 13.505 8.05484 13.4849C8.0549 13.4848 8.05495 13.4848 8.05501 13.4848L8.49298 13.2104L8.49307 13.2104C8.55551 13.1713 10.2275 12.12 11.9166 10.5982H4.08341ZM4.08341 10.5982C3.06703 9.68171 2.2606 8.78828 1.681 7.94435L4.08341 10.5982ZM15.158 6.39986C14.9672 6.89072 14.6853 7.41022 14.3191 7.94411M15.158 6.39986L14.3191 7.94411M14.3191 7.94411C13.7396 8.78807 12.9331 9.68154 11.9167 10.5981L14.3191 7.94411ZM0.5 4.71235C0.5 4.14367 0.616853 3.59183 0.846474 3.07066L1.68083 7.94411C1.31535 7.4112 1.03474 6.89125 0.841552 6.39871C0.611254 5.81054 0.5 5.24459 0.5 4.71235Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 pt-3">
+                                        <img src="./assets/images/svg/profile1.svg" alt="profile1">
+                                        <p class="ff_Quicksand fw_medium fc_bright fs_sm mb-0">@Debbie111</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">Last Bid</p>
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">1.57 ETH</p>
+                                    </div>
+                                    <button class="fc_primary ff_saira fw_medium fs_reg border-0 bid_btn">Place a
+                                        bid</button>
+                                </div>
+                            </div>
+                            <div class="pe-3">
+                                <div class="slider_card">
+                                    <img src="./assets/images/png/slider_img2.png" alt="slider_img" class="w-100">
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <h3 class="mb-0 fc_primary ff_saira fw_semiBold fs_xxl">Ready Players</h3>
+                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.2137 1.73274L14.2133 1.73236C13.8115 1.34771 13.3373 1.04147 12.816 0.830807L12.8154 0.830549C12.2746 0.611142 11.6942 0.498694 11.108 0.500011L11.1068 0.500014C10.2829 0.500013 9.48059 0.720388 8.78469 1.13504L8.78468 1.13505C8.61821 1.23423 8.46052 1.34289 8.3114 1.46102L8.00092 1.707L7.69043 1.46102C7.54132 1.34289 7.38362 1.23423 7.21716 1.13505L7.21714 1.13504C6.52125 0.720388 5.71898 0.500013 4.895 0.500013C4.30088 0.500013 3.72769 0.61097 3.18647 0.830551L3.18593 0.830767C2.6627 1.04235 2.19234 1.34607 1.78839 1.73251L1.7877 1.73316L1.7877 1.73316C1.38683 2.11519 1.06725 2.56971 0.846491 3.07062L14.2137 1.73274ZM14.2137 1.73274C14.6143 2.1154 14.9339 2.57004 15.1555 3.07089C15.385 3.59201 15.5016 4.14329 15.5 4.7109V4.71235C15.5 5.24459 15.3887 5.81054 15.1584 6.39871L15.158 6.39986M14.2137 1.73274L15.158 6.39986M4.08341 10.5982L4.08347 10.5983C4.92537 11.3577 5.7652 12.0013 6.4044 12.461C6.72362 12.6905 6.9918 12.8734 7.18388 13.0011C7.27991 13.065 7.35678 13.115 7.41133 13.15C7.43861 13.1675 7.46018 13.1812 7.47565 13.1909C7.49035 13.2002 7.49758 13.2046 7.49893 13.2055L7.49915 13.2056L7.50705 13.2103L7.507 13.2104L7.94497 13.4848C7.94507 13.4848 7.94517 13.4849 7.94527 13.4849C7.97778 13.505 8.02236 13.505 8.05484 13.4849C8.0549 13.4848 8.05495 13.4848 8.05501 13.4848L8.49298 13.2104L8.49307 13.2104C8.55551 13.1713 10.2275 12.12 11.9166 10.5982H4.08341ZM4.08341 10.5982C3.06703 9.68171 2.2606 8.78828 1.681 7.94435L4.08341 10.5982ZM15.158 6.39986C14.9672 6.89072 14.6853 7.41022 14.3191 7.94411M15.158 6.39986L14.3191 7.94411M14.3191 7.94411C13.7396 8.78807 12.9331 9.68154 11.9167 10.5981L14.3191 7.94411ZM0.5 4.71235C0.5 4.14367 0.616853 3.59183 0.846474 3.07066L1.68083 7.94411C1.31535 7.4112 1.03474 6.89125 0.841552 6.39871C0.611254 5.81054 0.5 5.24459 0.5 4.71235Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 pt-3">
+                                        <img src="./assets/images/svg/profile2.svg" alt="profile1">
+                                        <p class="ff_Quicksand fw_medium fc_bright fs_sm mb-0">@Debbie111</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">Last Bid</p>
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">1.57 ETH</p>
+                                    </div>
+                                    <button class="fc_primary ff_saira fw_medium fs_reg border-0 bid_btn">Place a
+                                        bid</button>
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="slider_card">
+                                    <img src="./assets/images/png/slider_img3.png" alt="slider_img1" class="w-100">
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <h3 class="mb-0 fc_primary ff_saira fw_semiBold fs_xxl">Ready Players</h3>
+                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.2137 1.73274L14.2133 1.73236C13.8115 1.34771 13.3373 1.04147 12.816 0.830807L12.8154 0.830549C12.2746 0.611142 11.6942 0.498694 11.108 0.500011L11.1068 0.500014C10.2829 0.500013 9.48059 0.720388 8.78469 1.13504L8.78468 1.13505C8.61821 1.23423 8.46052 1.34289 8.3114 1.46102L8.00092 1.707L7.69043 1.46102C7.54132 1.34289 7.38362 1.23423 7.21716 1.13505L7.21714 1.13504C6.52125 0.720388 5.71898 0.500013 4.895 0.500013C4.30088 0.500013 3.72769 0.61097 3.18647 0.830551L3.18593 0.830767C2.6627 1.04235 2.19234 1.34607 1.78839 1.73251L1.7877 1.73316L1.7877 1.73316C1.38683 2.11519 1.06725 2.56971 0.846491 3.07062L14.2137 1.73274ZM14.2137 1.73274C14.6143 2.1154 14.9339 2.57004 15.1555 3.07089C15.385 3.59201 15.5016 4.14329 15.5 4.7109V4.71235C15.5 5.24459 15.3887 5.81054 15.1584 6.39871L15.158 6.39986M14.2137 1.73274L15.158 6.39986M4.08341 10.5982L4.08347 10.5983C4.92537 11.3577 5.7652 12.0013 6.4044 12.461C6.72362 12.6905 6.9918 12.8734 7.18388 13.0011C7.27991 13.065 7.35678 13.115 7.41133 13.15C7.43861 13.1675 7.46018 13.1812 7.47565 13.1909C7.49035 13.2002 7.49758 13.2046 7.49893 13.2055L7.49915 13.2056L7.50705 13.2103L7.507 13.2104L7.94497 13.4848C7.94507 13.4848 7.94517 13.4849 7.94527 13.4849C7.97778 13.505 8.02236 13.505 8.05484 13.4849C8.0549 13.4848 8.05495 13.4848 8.05501 13.4848L8.49298 13.2104L8.49307 13.2104C8.55551 13.1713 10.2275 12.12 11.9166 10.5982H4.08341ZM4.08341 10.5982C3.06703 9.68171 2.2606 8.78828 1.681 7.94435L4.08341 10.5982ZM15.158 6.39986C14.9672 6.89072 14.6853 7.41022 14.3191 7.94411M15.158 6.39986L14.3191 7.94411M14.3191 7.94411C13.7396 8.78807 12.9331 9.68154 11.9167 10.5981L14.3191 7.94411ZM0.5 4.71235C0.5 4.14367 0.616853 3.59183 0.846474 3.07066L1.68083 7.94411C1.31535 7.4112 1.03474 6.89125 0.841552 6.39871C0.611254 5.81054 0.5 5.24459 0.5 4.71235Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 pt-3">
+                                        <img src="./assets/images/svg/profile3.svg" alt="profile1">
+                                        <p class="ff_Quicksand fw_medium fc_bright fs_sm mb-0">@Debbie111</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">Last Bid</p>
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">1.57 ETH</p>
+                                    </div>
+                                    <button class="fc_primary ff_saira fw_medium fs_reg border-0 bid_btn">Place a
+                                        bid</button>
+                                </div>
+                            </div>
+                            <div class="px-2">
+                                <div class="slider_card">
+                                    <img src="./assets/images/png/slider_img3.png" alt="slider_img1" class="w-100">
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <h3 class="mb-0 fc_primary ff_saira fw_semiBold fs_xxl">Ready Players</h3>
+                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14.2137 1.73274L14.2133 1.73236C13.8115 1.34771 13.3373 1.04147 12.816 0.830807L12.8154 0.830549C12.2746 0.611142 11.6942 0.498694 11.108 0.500011L11.1068 0.500014C10.2829 0.500013 9.48059 0.720388 8.78469 1.13504L8.78468 1.13505C8.61821 1.23423 8.46052 1.34289 8.3114 1.46102L8.00092 1.707L7.69043 1.46102C7.54132 1.34289 7.38362 1.23423 7.21716 1.13505L7.21714 1.13504C6.52125 0.720388 5.71898 0.500013 4.895 0.500013C4.30088 0.500013 3.72769 0.61097 3.18647 0.830551L3.18593 0.830767C2.6627 1.04235 2.19234 1.34607 1.78839 1.73251L1.7877 1.73316L1.7877 1.73316C1.38683 2.11519 1.06725 2.56971 0.846491 3.07062L14.2137 1.73274ZM14.2137 1.73274C14.6143 2.1154 14.9339 2.57004 15.1555 3.07089C15.385 3.59201 15.5016 4.14329 15.5 4.7109V4.71235C15.5 5.24459 15.3887 5.81054 15.1584 6.39871L15.158 6.39986M14.2137 1.73274L15.158 6.39986M4.08341 10.5982L4.08347 10.5983C4.92537 11.3577 5.7652 12.0013 6.4044 12.461C6.72362 12.6905 6.9918 12.8734 7.18388 13.0011C7.27991 13.065 7.35678 13.115 7.41133 13.15C7.43861 13.1675 7.46018 13.1812 7.47565 13.1909C7.49035 13.2002 7.49758 13.2046 7.49893 13.2055L7.49915 13.2056L7.50705 13.2103L7.507 13.2104L7.94497 13.4848C7.94507 13.4848 7.94517 13.4849 7.94527 13.4849C7.97778 13.505 8.02236 13.505 8.05484 13.4849C8.0549 13.4848 8.05495 13.4848 8.05501 13.4848L8.49298 13.2104L8.49307 13.2104C8.55551 13.1713 10.2275 12.12 11.9166 10.5982H4.08341ZM4.08341 10.5982C3.06703 9.68171 2.2606 8.78828 1.681 7.94435L4.08341 10.5982ZM15.158 6.39986C14.9672 6.89072 14.6853 7.41022 14.3191 7.94411M15.158 6.39986L14.3191 7.94411M14.3191 7.94411C13.7396 8.78807 12.9331 9.68154 11.9167 10.5981L14.3191 7.94411ZM0.5 4.71235C0.5 4.14367 0.616853 3.59183 0.846474 3.07066L1.68083 7.94411C1.31535 7.4112 1.03474 6.89125 0.841552 6.39871C0.611254 5.81054 0.5 5.24459 0.5 4.71235Z"
+                                                stroke="white" />
+                                        </svg>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-2 pt-3">
+                                        <img src="./assets/images/svg/profile3.svg" alt="profile1">
+                                        <p class="ff_Quicksand fw_medium fc_bright fs_sm mb-0">@Debbie111</p>
+                                    </div>
+                                    <div class="d-flex justify-content-between pt-3">
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">Last Bid</p>
+                                        <p class="ff_Quicksand fw_medium fc_lightGrey fs_xmd">1.57 ETH</p>
+                                    </div>
+                                    <button class="fc_primary ff_saira fw_medium fs_reg border-0 bid_btn">Place a
+                                        bid</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3 class="mb-0 pb-4 fc_primary ff_saira fw_semiBold">Recent Transactions</h3>
+                        <div class="transaction_box">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="circle">
+                                        <img src="./assets/images/svg/bitcoin.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0 ff_Quicksand fc_primary fw_semiBold fs_lg pb-1">0,15 BTC</h4>
+                                        <p class="mb-0 ff_interReg fw_reg fc_secondary">$16.533.10</p>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fc_primary ff_Quicksand fw_semiBold fs_lg">- $60</p>
+                            </div>
+                            <hr class="fc_primary">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="circle">
+                                        <img src="./assets/images/svg/trans_img2.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0 ff_Quicksand fc_primary fw_semiBold fs_lg pb-1">0,33 BTC</h4>
+                                        <p class="mb-0 ff_interReg fw_reg fc_secondary">$33.511.10</p>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fc_primary ff_Quicksand fw_semiBold fs_lg">-$1260</p>
+                            </div>
+                            <hr class="fc_primary">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="circle">
+                                        <img src="./assets/images/svg/trans_img3.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0 ff_Quicksand fc_primary fw_semiBold fs_lg pb-1">0,55 BTC</h4>
+                                        <p class="mb-0 ff_interReg fw_reg fc_secondary">$21.533.10</p>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fc_primary ff_Quicksand fw_semiBold fs_lg">-$2360</p>
+                            </div>
+                            <hr class="fc_primary">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="circle">
+                                        <img src="./assets/images/svg/bitcoin.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0 ff_Quicksand fc_primary fw_semiBold fs_lg pb-1">0,01 BTC</h4>
+                                        <p class="mb-0 ff_interReg fw_reg fc_secondary">$21.533.10</p>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fc_primary ff_Quicksand fw_semiBold fs_lg">-$630</p>
+                            </div>
+                            <hr class="fc_primary">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex gap-2">
+                                    <div class="circle">
+                                        <img src="./assets/images/svg/trans_img3.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-0 ff_Quicksand fc_primary fw_semiBold fs_lg pb-1">0,55 BTC</h4>
+                                        <p class="mb-0 ff_interReg fw_reg fc_secondary">$21.533.10</p>
+                                    </div>
+                                </div>
+                                <p class="mb-0 fc_primary ff_Quicksand fw_semiBold fs_lg">-$2360</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- JQUERY-MIN-JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- SLICK-MIN-JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $('.responsive').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrow:false,
+            prevArrow: $('.prev'),
+            nextArrow: $('.next'),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+</body>
+
+</html>
