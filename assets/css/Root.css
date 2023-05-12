@@ -5,19 +5,19 @@
 :root {
     /* font size */
     --fs-xsm: 9.83px;
-    --fs-sm: 12px;
-    --fs-md: 13.31px;
-    --fs-xmd: 14px;
-    --fs-reg: 16px;
-    --fs-lg: 16.64px;
-    --fs-xl: 17.75px;
-    --fs-xxl: 18px;
-    --fs-3xl: 20px;
-    --fs-4xl: 22.19px;
-    --fs-5xl: 24px;
-    --fs-6xl: 30px;
-    --fs-7xl: 32px;
-    --fs-8xl: 36px;
+    --fs-sm: 10px;
+    --fs-md: 11px;
+    --fs-xmd: 12px;
+    --fs-reg: 12px;
+    --fs-lg: 14px;
+    --fs-xl: 15px;
+    --fs-xxl: 17px;
+    --fs-3xl: 17px;
+    --fs-4xl: 20px;
+    --fs-5xl: 22px;
+    --fs-6xl: 25px;
+    --fs-7xl: 26px;
+    --fs-8xl: 30px;
 
     /* font family */
     --ff-inter: 'Inter', sans-serif;
